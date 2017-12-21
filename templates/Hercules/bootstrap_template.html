@@ -20,6 +20,9 @@
                     <form action="" method="get" class="form form-inline">
                         {% bootstrap_form filter.form layout='inline' %}
                         {% bootstrap_button 'Submit' %}
+						<a class="btn btn-primary" href="{% url 'Hercules'%}">Clear Filter</a>
+						<a class="btn btn-primary" href="{% url 'export'%}">Export Whole Hercules List</a>
+						
                     </form>
                 </div>
             {% endif %}
@@ -29,7 +32,6 @@
 				</table>
 				
             </div>
-            <a class="btn btn-primary" href="{% url 'export'%}">Export Whole Hercules List</a>
         </div>
     </div>
 </body>
