@@ -21,7 +21,7 @@
                         {% bootstrap_form filter.form layout='inline' %}
                         {% bootstrap_button 'Submit' %}
 						<a class="btn btn-primary" href="{% url 'Hercules'%}">Clear Filter</a>
-						<a class="btn btn-primary" href="{% url 'export'%}">Export Whole Hercules List</a>
+						<a class="btn btn-primary"  href="{% url 'export'%}" role="button">Export Whole Hercules List</a>
 						
                     </form>
                 </div>
@@ -29,6 +29,11 @@
             <div class="col-lg-12">
                 <table class="table table-striped">
 					{% render_table table 'django_tables2/bootstrap.html' %}
+					<tfoot>
+					<tr>
+						<td height=30>&copy; My Company, 2011</td>
+					</tr>
+					</tfoot>
 				</table>
 				
             </div>

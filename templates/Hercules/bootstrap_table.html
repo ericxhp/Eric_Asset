@@ -25,40 +25,12 @@
             {% endif %}
             <div class="col-lg-12">
                     <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th class="col-sm-1">Asset_Num</th>
-                                <th class="col-sm-2">Description</th>
-                                <th class="col-sm-2">SN</th>
-                                <th class="col-sm-2">Type</th>
-                                <th class="col-sm-3">Location</th>
-                                <th class="col-sm-2">Status</th>
-                                <th class="col-sm-2">Owner</th>
-                                <th class="col-sm-2">Assignee</th>
-                                <th class="col-sm-2">note</th>
-                                <th class="col-sm-2">Recorded Time</th>
-                                <th class="col-sm-2">Updated Time</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for item in table %}
-                                <tr>
-                                    <td>{{ item.asset_num }}</td>
-                                    <td>{{ item.desciption }}</td>
-                                    <td>{{ item.serial_num }}</td>
-                                    <td>{{ item.asset_type }}</td>
-                                    <td>{{ item.location }}</td>
-                                    <td>{{ item.status }}</td>
-                                    <td>{{ item.owner }}</td>
-                                    <td>{{ item.assignee }}</td>
-                                    <td>{{ item.order_num }}</td>
-                                    <td>{{ item.note }}</td>
-                                    <td>{{ item.recorded }}</td>
-                                    <td>{{ item.updated }}</td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
+						{%render_table table%}
+						<tfoot>
+						<tr>
+							<td height=30>&copy; My Company, 2011</td>
+						</tr>
+						</tfoot>
                     </table>
             </div>
 

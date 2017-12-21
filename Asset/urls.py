@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from Hercules.views import FilteredHercluesListView,get_csv,HerculesList
+from Hercules.views import FilteredHercluesListView,get_csv,HerculesList,import_db
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^hercules/$', FilteredHercluesListView.as_view(), name='Hercules'),
     url(r'^test/$',get_csv , name='export'),
     url(r'^filter/$',HerculesList , name='filter'),
+    url(r'^import/$',import_db, name='import'),
     
 ]
